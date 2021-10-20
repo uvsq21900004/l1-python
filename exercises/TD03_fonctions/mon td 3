@@ -52,4 +52,37 @@ temps = (2, 12, 45, 23)
 affichetemps(temps)
 
 
-def demandeTemps(temps)
+def demandeTemps():
+    jours = int(input("Donner le nombre de jours"))
+    heures = int(input("Donner le nombre de d'heures"))
+    minutes = int(input("Donner le nombre de minutes"))
+    secondes = int(input("Donner le nombre de secondes"))
+    while jours > 31 or jours < 0:
+        jours = int(input("Veiller donner un nombre de jours compris entre 0 et 31."))
+    while heures < 0 or heures > 24:
+        heures = int(input("Veuiller donner un nombres de minutes comprise entre 0 et 24."))
+    while minutes < 0 or minutes > 60:
+        minutes = int(input("Veuillez donner un nombres de minutes compris entre 0 et 60."))
+    while secondes < 0 or secondes > 60:
+        secondes = int(input("Veuillez donner un  nombre compris entre 0 et 60."))
+    temps = (jours, heures, minutes, secondes)
+    return temps
+
+
+temps = demandeTemps()
+jours, heures, minutes, secondes = temps
+
+print(temps)
+
+
+def sommeTemps(temps1,temps2):
+    secondetemps1 = tempsEnSeconde(temps1)
+    secondetemps2 = tempsEnSeconde76(temps2)
+    tempsenseconde= int(secondetemps1)+int(secondetemps2)
+    temps = secondeEnTemps(tempsenseconde)
+    return temps
+
+temps1=demandeTemps()
+temps2=demandeTemps()
+temps=sommeTemps(temps1,temps2)
+print(temps)
