@@ -75,14 +75,15 @@ jours, heures, minutes, secondes = temps
 print(temps)
 
 
-def sommeTemps(temps1,temps2):
+def sommeTemps(temps1, temps2):
     secondetemps1 = tempsEnSeconde(temps1)
-    secondetemps2 = tempsEnSeconde76(temps2)
-    tempsenseconde= int(secondetemps1)+int(secondetemps2)
+    secondetemps2 = tempsEnSeconde(temps2)
+    tempsenseconde = int(secondetemps1)+int(secondetemps2)
     temps = secondeEnTemps(tempsenseconde)
     return temps
 
-temps1=demandeTemps()
-temps2=demandeTemps()
-temps=sommeTemps(temps1,temps2)
+
+temps1 = demandeTemps()
+temps2 = demandeTemps()
+temps = sommeTemps(temps1, temps2)
 print(temps)
