@@ -87,3 +87,4 @@ temps1 = demandeTemps()
 temps2 = demandeTemps()
 temps = sommeTemps(temps1, temps2)
 print(temps)
+
